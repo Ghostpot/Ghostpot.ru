@@ -1,0 +1,85 @@
+[
+  {
+    "name": "Люси",
+    "title": "Уровень 15 · Высшая эльфийка · Жрица",
+    "className": "priest",
+    "classIcon": "/chronicle/icons/classicon_priest.jpg",
+    "portrait": "/chronicle/party/lucy-face.jpg",
+    "alt": "Люси: тёмные волосы, веснушки, повязка, рысьи и эльфийские уши.",
+    "note": "Очнулась босой на камнях и не помнила ничего, кроме имени. К порталу пришла со Светом, который выучила сама, с журналом и с письмом королю Вариану.",
+    "gear": [
+      {
+        "k": "Правая рука",
+        "v": "Радужный скипетр",
+        "icon": "/chronicle/icons/inv_wand_06.jpg"
+      },
+      {
+        "k": "Сумка",
+        "v": "Сумка синих драконов. Письмо в Штормград.",
+        "icon": "/chronicle/icons/inv_misc_bag_10.jpg"
+      }
+    ],
+    "spells": [
+      {
+        "k": "Кара",
+        "v": "Свет, с которого всё началось в роще.",
+        "icon": "/chronicle/icons/spell_holy_holysmite.jpg"
+      },
+      {
+        "k": "Щит",
+        "v": "Клала на Рафа в бою с Фалриссой.",
+        "icon": "/chronicle/icons/spell_holy_powerwordshield.jpg"
+      },
+      {
+        "k": "Лечение",
+        "v": "Держала им Асценси и Рафа.",
+        "icon": "/chronicle/icons/spell_holy_heal.jpg"
+      },
+      {
+        "k": "Кулинария",
+        "v": "84 из 150. Блестящая рыбка у очага.",
+        "icon": "/chronicle/icons/inv_misc_food_15.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Раф",
+    "title": "Уровень 16 · Паладин",
+    "className": "paladin",
+    "classIcon": "/chronicle/icons/classicon_paladin.jpg",
+    "portrait": "/chronicle/party/raf.jpg",
+    "alt": "Раф: каштановые волосы, красный жилет, меч и щит, эльфийские уши.",
+    "note": "В портал шагает первым. Щит держит, даже когда знает, что щит не поможет. Когда нервничает — шутит. Нервничает он всегда.",
+    "gear": [
+      {
+        "k": "Левая рука",
+        "v": "Щит",
+        "icon": "/chronicle/icons/inv_shield_04.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Асценси",
+    "title": "Уровень 15 · Охотник",
+    "className": "hunter",
+    "classIcon": "/chronicle/icons/classicon_hunter.jpg",
+    "portrait": "/chronicle/party/asensi.jpg",
+    "alt": "Асценси: белые волосы, лук, длинные эльфийские уши.",
+    "note": "Пьёт, когда не стреляет. Флягу протянул у очага — за брата. В портал идёт следом, рука на загривке медведя.",
+    "gear": [
+      {
+        "k": "Дальний бой",
+        "v": "Лук",
+        "icon": "/chronicle/icons/inv_weapon_bow_07.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Медведь",
+    "title": "Без имени",
+    "className": "beast",
+    "portrait": "/chronicle/party/bear.jpg",
+    "alt": "Бурый медведь без имени.",
+    "note": "Имени нет. Он знает, кто он. У очага положил морду ей на колено и ел рыбу, пока она не перестала считать."
+  }
+]

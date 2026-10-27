@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Ghostpot">
+  <rect width="32" height="32" rx="7" fill="#100E0C"/>
+  <path fill="#D4B483" d="M7.2 21.2 11.6 6.4 16 15.4 20.4 6.4 24.8 21.2H7.2z"/>
+  <path fill="#100E0C" d="M13.1 21.2 16 16.6 18.9 21.2z"/>
+  <path fill="#E26A2C" d="M16 17.4 17.6 20.6 16 24.2 14.4 20.6z"/>
+  <path fill="#8FA37A" d="M8.2 23.4h15.6v1.6H8.2z"/>
+</svg>

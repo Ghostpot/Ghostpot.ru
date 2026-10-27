@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Ghostpot — эфиры, Люси и книга",
+      "hasCanvas": false,
+      "bodyTextLen": 7068,
+      "bodyTextHash": "01d658de69771ccda739e09841ac2ff9fe96c84a4700f4d2c74f3919c62cfacd",
+      "bodyTextPrefix": "Главная Миры Книга Музыка Галерея Шапки Люси Эфиры Обо мне СТРИМ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Ghostpot — эфиры, Люси и книга",
+      "hasCanvas": false,
+      "bodyTextLen": 7068,
+      "bodyTextHash": "01d658de69771ccda739e09841ac2ff9fe96c84a4700f4d2c74f3919c62cfacd",
+      "bodyTextPrefix": "Главная Миры Книга Музыка Галерея Шапки Люси Эфиры Обо мне СТРИМ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
