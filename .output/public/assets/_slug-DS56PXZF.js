@@ -1,1 +1,0 @@
-import{d as e}from"./chronicle-DMTWJF4_.js";import{l as t,s as n}from"./index-C_i6IFzY.js";var r=t(),i=()=>(0,r.jsx)(e,{view:{name:`law`},guides:!0,children:(0,r.jsxs)(`article`,{className:`guide`,children:[(0,r.jsx)(`h1`,{children:`Такого гайда нет`}),(0,r.jsx)(`p`,{children:(0,r.jsx)(n,{to:`/guides`,children:`Все гайды`})})]})});export{i as notFoundComponent};
