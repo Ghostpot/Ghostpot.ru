@@ -137,6 +137,14 @@ export const lucySongs: Playable[] = [
     length: "4:30",
     note: "В метро, в пробке и в кресле. Нет сил оторваться и вернуться из сказки.",
   },
+  {
+    title: "Сделай это сам",
+    world: "Люси",
+    src: "/chronicle/music/sdelay.mp3",
+    cover: "/chronicle/music/sleeves/lucy.jpg",
+    length: "2:24",
+    note: "Не жди, пока дадут. Возьми судьбу в кулак и не отдавай богам.",
+  },
 ];
 
 catalog.push(...lucySongs);
