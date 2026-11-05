@@ -1,8 +1,8 @@
 import { x as require_jsx_runtime } from "./_libs/@tanstack/react-router+[...].mjs";
-import { d as Shell } from "./_ssr/chronicle-YF2IGL38.mjs";
-import { n as Route } from "./_ssr/router-CQ43v-XS.mjs";
-import { t as GuideArticle } from "./_ssr/guides-view-BiQNqitF.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/_slug-DBtr6cbz.js
+import { d as Shell } from "./_ssr/chronicle-DS76EhKf.mjs";
+import { n as Route } from "./_ssr/router-RAoYv2-Z.mjs";
+import { t as GuideArticle } from "./_ssr/guides-view-BYkjEb0h.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/_slug-vMS97ddf.js
 var import_jsx_runtime = require_jsx_runtime();
 var SplitComponent = function GuidePage() {
 	const guide = Route.useLoaderData();

@@ -1,7 +1,7 @@
 import { x as require_jsx_runtime, y as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { a as lessonThumb, i as guides, t as GUIDE_PUBLISHED } from "./guides-CWX7-Seh.mjs";
-import { _ as openSite } from "./chronicle-YF2IGL38.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/guides-view-BiQNqitF.js
+import { _ as openSite } from "./chronicle-DS76EhKf.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/guides-view-BYkjEb0h.js
 var import_jsx_runtime = require_jsx_runtime();
 function GuideCard({ guide, compact = false }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {

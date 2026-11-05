@@ -1,6 +1,6 @@
 import { x as require_jsx_runtime, y as Link } from "./_libs/@tanstack/react-router+[...].mjs";
-import { d as Shell } from "./_ssr/chronicle-YF2IGL38.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/_slug-BOZmMRMR.js
+import { d as Shell } from "./_ssr/chronicle-DS76EhKf.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/_slug-BkIDcIyX.js
 var import_jsx_runtime = require_jsx_runtime();
 var SplitNotFoundComponent = () => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Shell, {
 	view: { name: "law" },

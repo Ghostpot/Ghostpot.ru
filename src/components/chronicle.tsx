@@ -185,7 +185,7 @@ var ARRIVALS = ["В зал вошли двое и сели ближе к про�
 var SLIDES = [{
   src: "/brand/slides/rangers.webp",
   world: "Space Rangers",
-  line: "Пустой трюм. Утро. Чужие станции."
+  line: "Свет среди звёзд. Корабль и тишина."
 }, {
   src: "/brand/slides/gothic.webp",
   world: "Готика",
