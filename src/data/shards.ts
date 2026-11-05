@@ -79,6 +79,12 @@ export const shards: Shard[] = [
     line: "Жрица, которая шьёт. Нитки из Штормграда. Танка так и не нашла.",
   },
   {
+    id: "rangers",
+    world: "Space Rangers",
+    artifact: "Жетон рейнджера",
+    line: "Выдали на станции, когда карманы были пустые. Она не выбросила. Утром он ещё при ней.",
+  },
+  {
     id: "zomboid",
     world: "PROJECT ZOMBOID",
     artifact: "Уголь из костра",

@@ -14,513 +14,527 @@ var public_assets_data_default = {
 	"/favicon.svg": {
 		"type": "image/svg+xml",
 		"etag": "\"19f-eqDXEBxcQLnT2PXZLcsn64Ldzqc\"",
-		"mtime": "2026-11-01T10:44:36.020Z",
+		"mtime": "2026-11-05T00:54:51.567Z",
 		"size": 415,
 		"path": "../public/favicon.svg"
 	},
 	"/grain.png": {
 		"type": "image/png",
 		"etag": "\"40c4-+B1Qsfge+bzNfI41V65vbtBVMnE\"",
-		"mtime": "2026-11-01T10:44:36.020Z",
+		"mtime": "2026-11-05T00:54:51.567Z",
 		"size": 16580,
 		"path": "../public/grain.png"
 	},
 	"/robots.txt": {
 		"type": "text/plain; charset=utf-8",
 		"etag": "\"41-VnmE6BEpwC7Bo62v7Xemp7pdT9A\"",
-		"mtime": "2026-11-01T10:44:36.036Z",
+		"mtime": "2026-11-05T00:54:51.567Z",
 		"size": 65,
 		"path": "../public/robots.txt"
 	},
 	"/og.jpg": {
 		"type": "image/jpeg",
 		"etag": "\"24c06-Mnin6d609f/sovmcanV0gsNxs+U\"",
-		"mtime": "2026-11-01T10:44:36.028Z",
+		"mtime": "2026-11-05T00:54:51.575Z",
 		"size": 150534,
 		"path": "../public/og.jpg"
-	},
-	"/__grok/icon-180.png": {
-		"type": "image/png",
-		"etag": "\"834-Xk8vfS0DTFn7ggtkfEduWTcNWGE\"",
-		"mtime": "2026-11-01T10:44:36.000Z",
-		"size": 2100,
-		"path": "../public/__grok/icon-180.png"
 	},
 	"/sitemap.xml": {
 		"type": "application/xml",
 		"etag": "\"799-7z5dQaHmLU7BeT9mDvqmCr15w28\"",
-		"mtime": "2026-11-01T10:44:36.036Z",
+		"mtime": "2026-11-05T00:54:51.567Z",
 		"size": 1945,
 		"path": "../public/sitemap.xml"
 	},
-	"/assets/_slug-CmmtnvML.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"182-pMK9QTugJZubT6Vt8oTFsunPSc4\"",
-		"mtime": "2026-11-01T10:44:35.380Z",
-		"size": 386,
-		"path": "../public/assets/_slug-CmmtnvML.js"
+	"/__grok/icon-180.png": {
+		"type": "image/png",
+		"etag": "\"834-Xk8vfS0DTFn7ggtkfEduWTcNWGE\"",
+		"mtime": "2026-11-05T00:54:51.563Z",
+		"size": 2100,
+		"path": "../public/__grok/icon-180.png"
 	},
-	"/assets/_slug-DXsg_Blq.js": {
+	"/assets/_slug-ds21lXRX.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"121-swe8pDPlsHc8q8ovBNf1/qQm/Wc\"",
-		"mtime": "2026-11-01T10:44:35.380Z",
+		"etag": "\"121-QRF/72OkDPZrF/CmnlQIat4rl+A\"",
+		"mtime": "2026-11-05T00:54:50.919Z",
 		"size": 289,
-		"path": "../public/assets/_slug-DXsg_Blq.js"
+		"path": "../public/assets/_slug-ds21lXRX.js"
 	},
-	"/assets/guides-sk2ajxxi.js": {
+	"/assets/guides-TNmo2Jfo.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"f6-cH0KUNNln1z5r89B1wJczZ6yiT8\"",
-		"mtime": "2026-11-01T10:44:35.384Z",
+		"etag": "\"f6-CsJfm053u1TkBZJ19CGNKNXtBrI\"",
+		"mtime": "2026-11-05T00:54:50.919Z",
 		"size": 246,
-		"path": "../public/assets/guides-sk2ajxxi.js"
+		"path": "../public/assets/guides-TNmo2Jfo.js"
 	},
-	"/assets/guides-view-LxzPozHk.js": {
+	"/assets/guides-view-BvuF2QoD.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"e07-X38DsZLVMkiX0DFkvsE6UQFykxo\"",
-		"mtime": "2026-11-01T10:44:35.384Z",
+		"etag": "\"e07-86mTWbWrKudd1ez65uMGIdibRAc\"",
+		"mtime": "2026-11-05T00:54:50.919Z",
 		"size": 3591,
-		"path": "../public/assets/guides-view-LxzPozHk.js"
+		"path": "../public/assets/guides-view-BvuF2QoD.js"
 	},
-	"/assets/index-DAcRyaM8.js": {
+	"/assets/index-CCeTP32T.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"7a070-YLW2xiZ47M4ZCIN2ktdt7bi/SAs\"",
-		"mtime": "2026-11-01T10:44:35.376Z",
-		"size": 499824,
-		"path": "../public/assets/index-DAcRyaM8.js"
-	},
-	"/assets/routes-CJVS_arJ.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"402-9f2dw+719hL3imwd9x29xU4llx8\"",
-		"mtime": "2026-11-01T10:44:35.384Z",
-		"size": 1026,
-		"path": "../public/assets/routes-CJVS_arJ.js"
+		"etag": "\"7a032-/z+RRwqFfSdpiNnmXvWKwXEnzr8\"",
+		"mtime": "2026-11-05T00:54:50.919Z",
+		"size": 499762,
+		"path": "../public/assets/index-CCeTP32T.js"
 	},
 	"/assets/styles-DB_Y0hpc.css": {
 		"type": "text/css; charset=utf-8",
 		"etag": "\"1019c-O5sTyCvHCBdtyyGQAkG/hpkBbKs\"",
-		"mtime": "2026-11-01T10:44:35.384Z",
+		"mtime": "2026-11-05T00:54:50.919Z",
 		"size": 65948,
 		"path": "../public/assets/styles-DB_Y0hpc.css"
+	},
+	"/assets/routes-BY_FShuQ.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"402-6EpndqO8/ZvgqDNGj9Nx/BU4cMU\"",
+		"mtime": "2026-11-05T00:54:50.919Z",
+		"size": 1026,
+		"path": "../public/assets/routes-BY_FShuQ.js"
 	},
 	"/brand/book.webp": {
 		"type": "image/webp",
 		"etag": "\"1e48a-Vdmlkwcns8ktuLInozHH/yKPhBE\"",
-		"mtime": "2026-11-01T10:44:36.000Z",
+		"mtime": "2026-11-05T00:54:51.587Z",
 		"size": 124042,
 		"path": "../public/brand/book.webp"
-	},
-	"/brand/hero-photo.webp": {
-		"type": "image/webp",
-		"etag": "\"10770-FZRDVAajiINfOKPBMbmlGczf+Vc\"",
-		"mtime": "2026-11-01T10:44:36.036Z",
-		"size": 67440,
-		"path": "../public/brand/hero-photo.webp"
 	},
 	"/brand/ghostpot-word.webp": {
 		"type": "image/webp",
 		"etag": "\"133de-Lp6t0PleB7+2BvieTeIq/h5qFrA\"",
-		"mtime": "2026-11-01T10:44:36.036Z",
+		"mtime": "2026-11-05T00:54:51.563Z",
 		"size": 78814,
 		"path": "../public/brand/ghostpot-word.webp"
 	},
-	"/brand/hungry.webp": {
+	"/brand/hero-photo.webp": {
 		"type": "image/webp",
-		"etag": "\"12b06-u6iOvlLA9wl3sbXt6AYBZ7N5flo\"",
-		"mtime": "2026-11-01T10:44:36.036Z",
-		"size": 76550,
-		"path": "../public/brand/hungry.webp"
+		"etag": "\"10770-FZRDVAajiINfOKPBMbmlGczf+Vc\"",
+		"mtime": "2026-11-05T00:54:51.571Z",
+		"size": 67440,
+		"path": "../public/brand/hero-photo.webp"
 	},
 	"/brand/nikolay.webp": {
 		"type": "image/webp",
 		"etag": "\"69c0-6Tr1sZtaFioc1XzRMjNwIO3iMYA\"",
-		"mtime": "2026-11-01T10:44:36.036Z",
+		"mtime": "2026-11-05T00:54:51.587Z",
 		"size": 27072,
 		"path": "../public/brand/nikolay.webp"
 	},
-	"/fonts/f0.woff2": {
-		"type": "font/woff2",
-		"etag": "\"3244-7FUX5Z3qH1+zJGCcGgE542jIciM\"",
-		"mtime": "2026-11-01T10:44:36.000Z",
-		"size": 12868,
-		"path": "../public/fonts/f0.woff2"
+	"/brand/hungry.webp": {
+		"type": "image/webp",
+		"etag": "\"12b06-u6iOvlLA9wl3sbXt6AYBZ7N5flo\"",
+		"mtime": "2026-11-05T00:54:51.579Z",
+		"size": 76550,
+		"path": "../public/brand/hungry.webp"
 	},
 	"/fonts/f1.woff2": {
 		"type": "font/woff2",
 		"etag": "\"5ce8-8gbKqbDQykqGPUcS7stE/uqUmK8\"",
-		"mtime": "2026-11-01T10:44:36.036Z",
+		"mtime": "2026-11-05T00:54:51.587Z",
 		"size": 23784,
 		"path": "../public/fonts/f1.woff2"
 	},
 	"/fonts/f2.woff2": {
 		"type": "font/woff2",
 		"etag": "\"32d8-8d3rWjcyv9fSPPU/MPW9gnHwPJI\"",
-		"mtime": "2026-11-01T10:44:36.036Z",
+		"mtime": "2026-11-05T00:54:51.595Z",
 		"size": 13016,
 		"path": "../public/fonts/f2.woff2"
 	},
 	"/fonts/f3.woff2": {
 		"type": "font/woff2",
 		"etag": "\"5b64-DiRTjnmBF4QEF99jcstrz5kUhWM\"",
-		"mtime": "2026-11-01T10:44:36.036Z",
+		"mtime": "2026-11-05T00:54:51.595Z",
 		"size": 23396,
 		"path": "../public/fonts/f3.woff2"
 	},
 	"/fonts/f4.woff2": {
 		"type": "font/woff2",
 		"etag": "\"38a4-2PyUv3o5BDp3Wb1WSn4Ws+oIBzY\"",
-		"mtime": "2026-11-01T10:44:36.040Z",
+		"mtime": "2026-11-05T00:54:51.599Z",
 		"size": 14500,
 		"path": "../public/fonts/f4.woff2"
 	},
-	"/assets/chronicle-DEKXlqd6.js": {
+	"/fonts/f0.woff2": {
+		"type": "font/woff2",
+		"etag": "\"3244-7FUX5Z3qH1+zJGCcGgE542jIciM\"",
+		"mtime": "2026-11-05T00:54:51.563Z",
+		"size": 12868,
+		"path": "../public/fonts/f0.woff2"
+	},
+	"/assets/_slug-bDFaP4Y8.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"b748f-IE1kl3BgvDWWaA/BuOVhdJNzWew\"",
-		"mtime": "2026-11-01T10:44:35.380Z",
-		"size": 750735,
-		"path": "../public/assets/chronicle-DEKXlqd6.js"
+		"etag": "\"182-YWttHu+YtcGLJIx71FaVjAXjR08\"",
+		"mtime": "2026-11-05T00:54:50.919Z",
+		"size": 386,
+		"path": "../public/assets/_slug-bDFaP4Y8.js"
+	},
+	"/assets/chronicle-WceIUUZy.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"b7984-WrmvKIsNnqUhHCVd6bUEt5FUID0\"",
+		"mtime": "2026-11-05T00:54:50.919Z",
+		"size": 752004,
+		"path": "../public/assets/chronicle-WceIUUZy.js"
 	},
 	"/fonts/f5.woff2": {
 		"type": "font/woff2",
 		"etag": "\"6104-tClRAUxeyhJ0nYekcGyvItxP4IE\"",
-		"mtime": "2026-11-01T10:44:36.040Z",
+		"mtime": "2026-11-05T00:54:51.599Z",
 		"size": 24836,
 		"path": "../public/fonts/f5.woff2"
 	},
 	"/__grok/install/styles.css": {
 		"type": "text/css; charset=utf-8",
 		"etag": "\"1a3d-VUsWOMAheo1/P30EqU5qaIkyvIQ\"",
-		"mtime": "2026-11-01T10:44:36.000Z",
+		"mtime": "2026-11-05T00:54:51.563Z",
 		"size": 6717,
 		"path": "../public/__grok/install/styles.css"
-	},
-	"/brand/guides/bannerlord.webp": {
-		"type": "image/webp",
-		"etag": "\"250c4-jwitzWvAXbn3xsXO+HYJwC+Iuo0\"",
-		"mtime": "2026-11-01T10:44:36.000Z",
-		"size": 151748,
-		"path": "../public/brand/guides/bannerlord.webp"
 	},
 	"/brand/guides/borderlands.webp": {
 		"type": "image/webp",
 		"etag": "\"30c36-gDVVNsdZIl0v4gJ3ni3TgJTsBPI\"",
-		"mtime": "2026-11-01T10:44:36.044Z",
+		"mtime": "2026-11-05T00:54:51.599Z",
 		"size": 199734,
 		"path": "../public/brand/guides/borderlands.webp"
 	},
 	"/brand/guides/fallout-electro.webp": {
 		"type": "image/webp",
 		"etag": "\"17a3a-gEjsmhjbM+7kTKCRJZCOfbPcDm4\"",
-		"mtime": "2026-11-01T10:44:36.044Z",
+		"mtime": "2026-11-05T00:54:51.599Z",
 		"size": 96826,
 		"path": "../public/brand/guides/fallout-electro.webp"
 	},
-	"/brand/guides/fallout.webp": {
+	"/brand/guides/bannerlord.webp": {
 		"type": "image/webp",
-		"etag": "\"25384-ZI1hPH29Jw5c/qH0BGyPG3vWqyw\"",
-		"mtime": "2026-11-01T10:44:36.044Z",
-		"size": 152452,
-		"path": "../public/brand/guides/fallout.webp"
+		"etag": "\"250c4-jwitzWvAXbn3xsXO+HYJwC+Iuo0\"",
+		"mtime": "2026-11-05T00:54:51.567Z",
+		"size": 151748,
+		"path": "../public/brand/guides/bannerlord.webp"
 	},
 	"/brand/guides/gothic-armor.webp": {
 		"type": "image/webp",
 		"etag": "\"16244-Dcf83tcRHxyEhEnQWJ0Q+vUg+LE\"",
-		"mtime": "2026-11-01T10:44:36.044Z",
+		"mtime": "2026-11-05T00:54:51.607Z",
 		"size": 90692,
 		"path": "../public/brand/guides/gothic-armor.webp"
 	},
-	"/brand/guides/gothic.webp": {
+	"/brand/guides/fallout.webp": {
 		"type": "image/webp",
-		"etag": "\"168f0-7FKX2ORSsulMfm6N3uLdKQeBtIE\"",
-		"mtime": "2026-11-01T10:44:36.048Z",
-		"size": 92400,
-		"path": "../public/brand/guides/gothic.webp"
+		"etag": "\"25384-ZI1hPH29Jw5c/qH0BGyPG3vWqyw\"",
+		"mtime": "2026-11-05T00:54:51.599Z",
+		"size": 152452,
+		"path": "../public/brand/guides/fallout.webp"
 	},
 	"/brand/guides/nolf.webp": {
 		"type": "image/webp",
 		"etag": "\"d832-F/IiP6YqIhFwm7WKYEoG68hqa+0\"",
-		"mtime": "2026-11-01T10:44:36.044Z",
+		"mtime": "2026-11-05T00:54:51.619Z",
 		"size": 55346,
 		"path": "../public/brand/guides/nolf.webp"
 	},
 	"/brand/guides/pathfinder.webp": {
 		"type": "image/webp",
 		"etag": "\"11c4c-3kmWLh+V61Vc2PKF0J/ijReEkJQ\"",
-		"mtime": "2026-11-01T10:44:36.048Z",
+		"mtime": "2026-11-05T00:54:51.619Z",
 		"size": 72780,
 		"path": "../public/brand/guides/pathfinder.webp"
-	},
-	"/brand/guides/kenshi.webp": {
-		"type": "image/webp",
-		"etag": "\"21fbe-tAAdAW9hz+N053sWxcRN5ojRxkQ\"",
-		"mtime": "2026-11-01T10:44:36.048Z",
-		"size": 139198,
-		"path": "../public/brand/guides/kenshi.webp"
-	},
-	"/brand/guides/poe.webp": {
-		"type": "image/webp",
-		"etag": "\"20e76-8fj0RXnDRC0ZwSzj0PQ9RH0RnQM\"",
-		"mtime": "2026-11-01T10:44:36.048Z",
-		"size": 134774,
-		"path": "../public/brand/guides/poe.webp"
-	},
-	"/brand/guides/sector.webp": {
-		"type": "image/webp",
-		"etag": "\"1894e-34KPrVXfS7/ucx87o88ZAA6Y1Gw\"",
-		"mtime": "2026-11-01T10:44:36.048Z",
-		"size": 100686,
-		"path": "../public/brand/guides/sector.webp"
 	},
 	"/brand/guides/quake.webp": {
 		"type": "image/webp",
 		"etag": "\"1746c-eqhTS/B6p9A1ENHitnm7dDCtNfQ\"",
-		"mtime": "2026-11-01T10:44:36.048Z",
+		"mtime": "2026-11-05T00:54:51.619Z",
 		"size": 95340,
 		"path": "../public/brand/guides/quake.webp"
+	},
+	"/brand/guides/gothic.webp": {
+		"type": "image/webp",
+		"etag": "\"168f0-7FKX2ORSsulMfm6N3uLdKQeBtIE\"",
+		"mtime": "2026-11-05T00:54:51.611Z",
+		"size": 92400,
+		"path": "../public/brand/guides/gothic.webp"
+	},
+	"/brand/guides/kenshi.webp": {
+		"type": "image/webp",
+		"etag": "\"21fbe-tAAdAW9hz+N053sWxcRN5ojRxkQ\"",
+		"mtime": "2026-11-05T00:54:51.611Z",
+		"size": 139198,
+		"path": "../public/brand/guides/kenshi.webp"
+	},
+	"/brand/guides/sector.webp": {
+		"type": "image/webp",
+		"etag": "\"1894e-34KPrVXfS7/ucx87o88ZAA6Y1Gw\"",
+		"mtime": "2026-11-05T00:54:51.627Z",
+		"size": 100686,
+		"path": "../public/brand/guides/sector.webp"
 	},
 	"/brand/guides/tomb.webp": {
 		"type": "image/webp",
 		"etag": "\"21d28-XIiqSFmr9l334V/r6mhQJsNREfw\"",
-		"mtime": "2026-11-01T10:44:36.048Z",
+		"mtime": "2026-11-05T00:54:51.627Z",
 		"size": 138536,
 		"path": "../public/brand/guides/tomb.webp"
 	},
-	"/brand/guides/zomboid.webp": {
+	"/brand/guides/poe.webp": {
 		"type": "image/webp",
-		"etag": "\"165a8-u4qet7xsXcaS7ZlQ5rgTmIaR+oo\"",
-		"mtime": "2026-11-01T10:44:36.048Z",
-		"size": 91560,
-		"path": "../public/brand/guides/zomboid.webp"
-	},
-	"/brand/slides/azeroth.webp": {
-		"type": "image/webp",
-		"etag": "\"14b4a-ajhyy4siTo5l3HI+1zg8YKTmdbA\"",
-		"mtime": "2026-11-01T10:44:36.004Z",
-		"size": 84810,
-		"path": "../public/brand/slides/azeroth.webp"
+		"etag": "\"20e76-8fj0RXnDRC0ZwSzj0PQ9RH0RnQM\"",
+		"mtime": "2026-11-05T00:54:51.619Z",
+		"size": 134774,
+		"path": "../public/brand/guides/poe.webp"
 	},
 	"/brand/guides/wow.webp": {
 		"type": "image/webp",
 		"etag": "\"1ce50-HZUi0C6OznJctsXqZ7fUjXrX+R8\"",
-		"mtime": "2026-11-01T10:44:36.048Z",
+		"mtime": "2026-11-05T00:54:51.627Z",
 		"size": 118352,
 		"path": "../public/brand/guides/wow.webp"
 	},
-	"/brand/slides/fallout.webp": {
+	"/brand/guides/zomboid.webp": {
 		"type": "image/webp",
-		"etag": "\"19a82-gHaatieBn7L9Itj9v36rCSUKDBQ\"",
-		"mtime": "2026-11-01T10:44:36.052Z",
-		"size": 105090,
-		"path": "../public/brand/slides/fallout.webp"
+		"etag": "\"165a8-u4qet7xsXcaS7ZlQ5rgTmIaR+oo\"",
+		"mtime": "2026-11-05T00:54:51.627Z",
+		"size": 91560,
+		"path": "../public/brand/guides/zomboid.webp"
 	},
 	"/brand/slides/calradia.webp": {
 		"type": "image/webp",
 		"etag": "\"224e6-8pTId0wgR41VRElFtFI2RoK3zS0\"",
-		"mtime": "2026-11-01T10:44:36.052Z",
+		"mtime": "2026-11-05T00:54:51.627Z",
 		"size": 140518,
 		"path": "../public/brand/slides/calradia.webp"
 	},
-	"/brand/slides/gothic.webp": {
+	"/brand/slides/fallout.webp": {
 		"type": "image/webp",
-		"etag": "\"11910-2hox4+BoTIjY2cRobilsG0Ob3cs\"",
-		"mtime": "2026-11-01T10:44:36.052Z",
-		"size": 71952,
-		"path": "../public/brand/slides/gothic.webp"
+		"etag": "\"19a82-gHaatieBn7L9Itj9v36rCSUKDBQ\"",
+		"mtime": "2026-11-05T00:54:51.627Z",
+		"size": 105090,
+		"path": "../public/brand/slides/fallout.webp"
 	},
 	"/brand/slides/hall.webp": {
 		"type": "image/webp",
 		"etag": "\"5158-RDuVYLVMZ5ocP75bPSxM0gIsGwA\"",
-		"mtime": "2026-11-01T10:44:36.052Z",
+		"mtime": "2026-11-05T00:54:51.627Z",
 		"size": 20824,
 		"path": "../public/brand/slides/hall.webp"
 	},
 	"/brand/slides/kenshi.webp": {
 		"type": "image/webp",
 		"etag": "\"246f6-8jysfAsg65wKnzlH1nV4GLoU+w0\"",
-		"mtime": "2026-11-01T10:44:36.052Z",
+		"mtime": "2026-11-05T00:54:51.627Z",
 		"size": 149238,
 		"path": "../public/brand/slides/kenshi.webp"
 	},
-	"/brand/slides/zomboid.webp": {
+	"/brand/slides/gothic.webp": {
 		"type": "image/webp",
-		"etag": "\"104ba-9hU4ocVWvgciS0mwGFtVgDqyNsE\"",
-		"mtime": "2026-11-01T10:44:36.052Z",
-		"size": 66746,
-		"path": "../public/brand/slides/zomboid.webp"
+		"etag": "\"11910-2hox4+BoTIjY2cRobilsG0Ob3cs\"",
+		"mtime": "2026-11-05T00:54:51.627Z",
+		"size": 71952,
+		"path": "../public/brand/slides/gothic.webp"
+	},
+	"/brand/slides/rangers.webp": {
+		"type": "image/webp",
+		"etag": "\"2ab2c-cEzpZBMQlSoZhS2UnIS4fZe9gFA\"",
+		"mtime": "2026-11-05T00:54:51.627Z",
+		"size": 174892,
+		"path": "../public/brand/slides/rangers.webp"
 	},
 	"/chronicle/cues.json": {
 		"type": "application/json",
 		"etag": "\"2b9cef-RvIF3yJB9zfYKUjWb2B+UiUNwPk\"",
-		"mtime": "2026-11-01T10:44:36.008Z",
+		"mtime": "2026-11-05T00:54:51.571Z",
 		"size": 2858223,
 		"path": "../public/chronicle/cues.json"
 	},
-	"/brand/shards/azeroth.webp": {
+	"/brand/slides/azeroth.webp": {
 		"type": "image/webp",
-		"etag": "\"13b2-8qPwU/qeJ08iszY4idrwc2HnmPw\"",
-		"mtime": "2026-11-01T10:44:36.004Z",
-		"size": 5042,
-		"path": "../public/brand/shards/azeroth.webp"
+		"etag": "\"14b4a-ajhyy4siTo5l3HI+1zg8YKTmdbA\"",
+		"mtime": "2026-11-05T00:54:51.567Z",
+		"size": 84810,
+		"path": "../public/brand/slides/azeroth.webp"
 	},
-	"/brand/shards/calradia.webp": {
+	"/brand/slides/zomboid.webp": {
 		"type": "image/webp",
-		"etag": "\"13c6-4I/21NDMMh7Io826SmI2TNcytww\"",
-		"mtime": "2026-11-01T10:44:36.048Z",
-		"size": 5062,
-		"path": "../public/brand/shards/calradia.webp"
-	},
-	"/brand/shards/fallout.webp": {
-		"type": "image/webp",
-		"etag": "\"792-3zXZk2kxMtLC2C5ps3yipldgvdc\"",
-		"mtime": "2026-11-01T10:44:36.048Z",
-		"size": 1938,
-		"path": "../public/brand/shards/fallout.webp"
-	},
-	"/brand/shards/gothic.webp": {
-		"type": "image/webp",
-		"etag": "\"bf2-QKmmb+sZk8AeA3AbFF5P1X5Rtwo\"",
-		"mtime": "2026-11-01T10:44:36.048Z",
-		"size": 3058,
-		"path": "../public/brand/shards/gothic.webp"
-	},
-	"/brand/shards/kenshi.webp": {
-		"type": "image/webp",
-		"etag": "\"660-9Np7k6I6Rg6TSn4oY8wgg0ztcJM\"",
-		"mtime": "2026-11-01T10:44:36.048Z",
-		"size": 1632,
-		"path": "../public/brand/shards/kenshi.webp"
-	},
-	"/brand/shards/nolf.webp": {
-		"type": "image/webp",
-		"etag": "\"77c-o5Ggze32kcysODYY1Br6oh24+UE\"",
-		"mtime": "2026-11-01T10:44:36.048Z",
-		"size": 1916,
-		"path": "../public/brand/shards/nolf.webp"
-	},
-	"/brand/shards/pandora.webp": {
-		"type": "image/webp",
-		"etag": "\"1194-9j1atJjMGOZ/NZv9NY1Rwaocv04\"",
-		"mtime": "2026-11-01T10:44:36.048Z",
-		"size": 4500,
-		"path": "../public/brand/shards/pandora.webp"
-	},
-	"/brand/shards/pathfinder.webp": {
-		"type": "image/webp",
-		"etag": "\"1d7a-ztwYsm0BHcqqhu0FoKgxqTcypxw\"",
-		"mtime": "2026-11-01T10:44:36.048Z",
-		"size": 7546,
-		"path": "../public/brand/shards/pathfinder.webp"
-	},
-	"/brand/shards/poe.webp": {
-		"type": "image/webp",
-		"etag": "\"9a4-IxSevtRCoNeTURlG9nsXmeeyTyI\"",
-		"mtime": "2026-11-01T10:44:36.048Z",
-		"size": 2468,
-		"path": "../public/brand/shards/poe.webp"
-	},
-	"/brand/shards/quake.webp": {
-		"type": "image/webp",
-		"etag": "\"ff4-NDRzYz/8R5KJbEF47XaWwI3DVFE\"",
-		"mtime": "2026-11-01T10:44:36.052Z",
-		"size": 4084,
-		"path": "../public/brand/shards/quake.webp"
-	},
-	"/brand/shards/sector.webp": {
-		"type": "image/webp",
-		"etag": "\"ce6-wCo1+Iq7B9D+hik80tnxbFrONGQ\"",
-		"mtime": "2026-11-01T10:44:36.052Z",
-		"size": 3302,
-		"path": "../public/brand/shards/sector.webp"
-	},
-	"/brand/shards/tomb.webp": {
-		"type": "image/webp",
-		"etag": "\"bf6-PJRRsaGHe/mcV9p+KexGRK546KQ\"",
-		"mtime": "2026-11-01T10:44:36.052Z",
-		"size": 3062,
-		"path": "../public/brand/shards/tomb.webp"
-	},
-	"/brand/shards/zomboid.webp": {
-		"type": "image/webp",
-		"etag": "\"8a2-6f/W1cdrQLGRUPx0Y3bdKOMofqs\"",
-		"mtime": "2026-11-01T10:44:36.052Z",
-		"size": 2210,
-		"path": "../public/brand/shards/zomboid.webp"
+		"etag": "\"104ba-9hU4ocVWvgciS0mwGFtVgDqyNsE\"",
+		"mtime": "2026-11-05T00:54:51.627Z",
+		"size": 66746,
+		"path": "../public/brand/slides/zomboid.webp"
 	},
 	"/chronicle/party/lucy-face.jpg": {
 		"type": "image/jpeg",
 		"etag": "\"11637-qX1jvoxlQ3qP6ls6Xau9GHJE2bM\"",
-		"mtime": "2026-11-01T10:44:36.020Z",
+		"mtime": "2026-11-05T00:54:51.567Z",
 		"size": 71223,
 		"path": "../public/chronicle/party/lucy-face.jpg"
 	},
 	"/chronicle/party/lucy-ref.jpg": {
 		"type": "image/jpeg",
 		"etag": "\"281da-TG5kKr0mv+NxHXAb+Kywl59EXvA\"",
-		"mtime": "2026-11-01T10:44:36.056Z",
+		"mtime": "2026-11-05T00:54:51.631Z",
 		"size": 164314,
 		"path": "../public/chronicle/party/lucy-ref.jpg"
 	},
 	"/chronicle/party/lucy.jpg": {
 		"type": "image/jpeg",
 		"etag": "\"11637-qX1jvoxlQ3qP6ls6Xau9GHJE2bM\"",
-		"mtime": "2026-11-01T10:44:36.056Z",
+		"mtime": "2026-11-05T00:54:51.631Z",
 		"size": 71223,
 		"path": "../public/chronicle/party/lucy.jpg"
+	},
+	"/brand/shards/azeroth.webp": {
+		"type": "image/webp",
+		"etag": "\"13b2-8qPwU/qeJ08iszY4idrwc2HnmPw\"",
+		"mtime": "2026-11-05T00:54:51.567Z",
+		"size": 5042,
+		"path": "../public/brand/shards/azeroth.webp"
+	},
+	"/brand/shards/calradia.webp": {
+		"type": "image/webp",
+		"etag": "\"13c6-4I/21NDMMh7Io826SmI2TNcytww\"",
+		"mtime": "2026-11-05T00:54:51.627Z",
+		"size": 5062,
+		"path": "../public/brand/shards/calradia.webp"
+	},
+	"/brand/shards/fallout.webp": {
+		"type": "image/webp",
+		"etag": "\"792-3zXZk2kxMtLC2C5ps3yipldgvdc\"",
+		"mtime": "2026-11-05T00:54:51.627Z",
+		"size": 1938,
+		"path": "../public/brand/shards/fallout.webp"
+	},
+	"/brand/shards/gothic.webp": {
+		"type": "image/webp",
+		"etag": "\"bf2-QKmmb+sZk8AeA3AbFF5P1X5Rtwo\"",
+		"mtime": "2026-11-05T00:54:51.627Z",
+		"size": 3058,
+		"path": "../public/brand/shards/gothic.webp"
+	},
+	"/brand/shards/kenshi.webp": {
+		"type": "image/webp",
+		"etag": "\"660-9Np7k6I6Rg6TSn4oY8wgg0ztcJM\"",
+		"mtime": "2026-11-05T00:54:51.627Z",
+		"size": 1632,
+		"path": "../public/brand/shards/kenshi.webp"
+	},
+	"/brand/shards/nolf.webp": {
+		"type": "image/webp",
+		"etag": "\"77c-o5Ggze32kcysODYY1Br6oh24+UE\"",
+		"mtime": "2026-11-05T00:54:51.627Z",
+		"size": 1916,
+		"path": "../public/brand/shards/nolf.webp"
+	},
+	"/brand/shards/pandora.webp": {
+		"type": "image/webp",
+		"etag": "\"1194-9j1atJjMGOZ/NZv9NY1Rwaocv04\"",
+		"mtime": "2026-11-05T00:54:51.627Z",
+		"size": 4500,
+		"path": "../public/brand/shards/pandora.webp"
+	},
+	"/brand/shards/pathfinder.webp": {
+		"type": "image/webp",
+		"etag": "\"1d7a-ztwYsm0BHcqqhu0FoKgxqTcypxw\"",
+		"mtime": "2026-11-05T00:54:51.627Z",
+		"size": 7546,
+		"path": "../public/brand/shards/pathfinder.webp"
+	},
+	"/brand/shards/poe.webp": {
+		"type": "image/webp",
+		"etag": "\"9a4-IxSevtRCoNeTURlG9nsXmeeyTyI\"",
+		"mtime": "2026-11-05T00:54:51.627Z",
+		"size": 2468,
+		"path": "../public/brand/shards/poe.webp"
+	},
+	"/brand/shards/quake.webp": {
+		"type": "image/webp",
+		"etag": "\"ff4-NDRzYz/8R5KJbEF47XaWwI3DVFE\"",
+		"mtime": "2026-11-05T00:54:51.627Z",
+		"size": 4084,
+		"path": "../public/brand/shards/quake.webp"
+	},
+	"/brand/shards/rangers.webp": {
+		"type": "image/webp",
+		"etag": "\"d64-u3yfkgchple1Hc62WRYZvJnQ2Ec\"",
+		"mtime": "2026-11-05T00:54:51.627Z",
+		"size": 3428,
+		"path": "../public/brand/shards/rangers.webp"
+	},
+	"/brand/shards/sector.webp": {
+		"type": "image/webp",
+		"etag": "\"ce6-wCo1+Iq7B9D+hik80tnxbFrONGQ\"",
+		"mtime": "2026-11-05T00:54:51.627Z",
+		"size": 3302,
+		"path": "../public/brand/shards/sector.webp"
+	},
+	"/brand/shards/tomb.webp": {
+		"type": "image/webp",
+		"etag": "\"bf6-PJRRsaGHe/mcV9p+KexGRK546KQ\"",
+		"mtime": "2026-11-05T00:54:51.627Z",
+		"size": 3062,
+		"path": "../public/brand/shards/tomb.webp"
+	},
+	"/brand/shards/zomboid.webp": {
+		"type": "image/webp",
+		"etag": "\"8a2-6f/W1cdrQLGRUPx0Y3bdKOMofqs\"",
+		"mtime": "2026-11-05T00:54:51.627Z",
+		"size": 2210,
+		"path": "../public/brand/shards/zomboid.webp"
 	},
 	"/__grok/install/assets/homescreen/glass-puzzle.svg": {
 		"type": "image/svg+xml",
 		"etag": "\"713-AP2wG8KChAGjse1Fn+f/+vDN+sQ\"",
-		"mtime": "2026-11-01T10:44:36.056Z",
+		"mtime": "2026-11-05T00:54:51.631Z",
 		"size": 1811,
 		"path": "../public/__grok/install/assets/homescreen/glass-puzzle.svg"
 	},
 	"/__grok/install/assets/homescreen/glass-share.svg": {
 		"type": "image/svg+xml",
 		"etag": "\"954-jb3ATcKjqgMOYrA/4w1v21j0Jvg\"",
-		"mtime": "2026-11-01T10:44:36.056Z",
+		"mtime": "2026-11-05T00:54:51.631Z",
 		"size": 2388,
 		"path": "../public/__grok/install/assets/homescreen/glass-share.svg"
 	},
 	"/__grok/install/assets/homescreen/logo-grok.svg": {
 		"type": "image/svg+xml",
 		"etag": "\"423-5mXO+yh9KW40jM3to5JlWPhxNK8\"",
-		"mtime": "2026-11-01T10:44:36.056Z",
+		"mtime": "2026-11-05T00:54:51.631Z",
 		"size": 1059,
 		"path": "../public/__grok/install/assets/homescreen/logo-grok.svg"
 	},
 	"/__grok/install/assets/homescreen/ob-ipad.png": {
 		"type": "image/png",
 		"etag": "\"18dd3-wlRwrpmBImStuiu+4poVz7ANin4\"",
-		"mtime": "2026-11-01T10:44:36.060Z",
+		"mtime": "2026-11-05T00:54:51.631Z",
 		"size": 101843,
 		"path": "../public/__grok/install/assets/homescreen/ob-ipad.png"
 	},
 	"/__grok/install/assets/homescreen/ob-phone.png": {
 		"type": "image/png",
 		"etag": "\"194bc-oZradWHIHO68q2glHU0Gk5ttpWA\"",
-		"mtime": "2026-11-01T10:44:36.056Z",
+		"mtime": "2026-11-05T00:54:51.631Z",
 		"size": 103612,
 		"path": "../public/__grok/install/assets/homescreen/ob-phone.png"
 	},
 	"/__grok/install/assets/homescreen/plus.svg": {
 		"type": "image/svg+xml",
 		"etag": "\"961-sSBPunx/13vbMNAlPxb7UeO3l3A\"",
-		"mtime": "2026-11-01T10:44:36.056Z",
+		"mtime": "2026-11-05T00:54:51.631Z",
 		"size": 2401,
 		"path": "../public/__grok/install/assets/homescreen/plus.svg"
-	},
-	"/chronicle/music/schit.mp3": {
-		"type": "audio/mpeg",
-		"etag": "\"4e9e35-i1mUrC8c3Y/E5mOi4scq29hLcK4\"",
-		"mtime": "2026-11-01T10:44:36.076Z",
-		"size": 5152309,
-		"path": "../public/chronicle/music/schit.mp3"
 	},
 	"/chronicle/music/sdelay.mp3": {
 		"type": "audio/mpeg",
 		"etag": "\"33a57b-uSh5zifKI30AezREEdWmfX1QT3Q\"",
-		"mtime": "2026-11-01T10:44:36.068Z",
+		"mtime": "2026-11-05T00:54:51.655Z",
 		"size": 3384699,
 		"path": "../public/chronicle/music/sdelay.mp3"
+	},
+	"/chronicle/music/schit.mp3": {
+		"type": "audio/mpeg",
+		"etag": "\"4e9e35-i1mUrC8c3Y/E5mOi4scq29hLcK4\"",
+		"mtime": "2026-11-05T00:54:51.631Z",
+		"size": 5152309,
+		"path": "../public/chronicle/music/schit.mp3"
 	}
 };
 //#endregion

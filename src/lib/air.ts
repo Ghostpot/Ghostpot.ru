@@ -27,6 +27,7 @@ function decode(value: string) {
 
 function worldOf(title: string) {
   const text = title.toLowerCase();
+  if (text.includes("ranger") || text.includes("рейнджер") || text.includes("космическ")) return "Space Rangers";
   if (text.includes("zomboid")) return "PROJECT ZOMBOID";
   if (text.includes("wow") || text.includes("sirus") || text.includes("азерот")) return "Азерот";
   if (text.includes("gothic") || text.includes("готик")) return "Готика";

@@ -56,7 +56,7 @@ export function LiveBadge() {
     >
       <i />
       <span>
-        <span>{report ? "Эфир не идёт" : "Проверяю площадки"}</span>
+        <span>{report ? "Онлайн по утрам" : "Проверяю площадки"}</span>
         <b>В мире: {world}</b>
       </span>
     </button>

@@ -1,6 +1,6 @@
 import { t as createServerFn } from "./ssr.mjs";
 import { t as createServerRpc } from "./createServerRpc-A6pJPYTF.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/air-CZVBqr_R.js
+//#region node_modules/.nitro/vite/services/ssr/assets/air-Ddr6FI06.js
 var FEED = "https://www.youtube.com/feeds/videos.xml?channel_id=UCSEgw1Ws8L2nZdMSl-AWykQ";
 var cache = null;
 var pending = null;
@@ -9,6 +9,7 @@ function decode(value) {
 }
 function worldOf(title) {
 	const text = title.toLowerCase();
+	if (text.includes("ranger") || text.includes("рейнджер") || text.includes("космическ")) return "Space Rangers";
 	if (text.includes("zomboid")) return "PROJECT ZOMBOID";
 	if (text.includes("wow") || text.includes("sirus") || text.includes("азерот")) return "Азерот";
 	if (text.includes("gothic") || text.includes("готик")) return "Готика";
