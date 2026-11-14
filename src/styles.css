@@ -534,9 +534,10 @@
 
 .shelf {
   display: grid;
-  grid-template-columns: 1.5fr 0.7fr;
+  grid-template-columns: 1fr 1fr;
   gap: 0.8rem;
   margin-top: 1rem;
+  align-items: stretch;
 }
 
 .tome {
@@ -555,6 +556,13 @@
   object-position: center top;
 }
 
+.tome > div {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+}
+
 .tome h2 {
   margin: 0.15rem 0 0.35rem;
   font-family: var(--font-display);
@@ -565,14 +573,21 @@
 .tome p { margin: 0; }
 
 .tome-song {
-  margin: 0.75rem 0 0.15rem;
+  margin: auto 0 0;
+  min-width: 0;
+}
+
+.tome-song b {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .tome-song[data-on="true"] {
   border-color: color-mix(in srgb, var(--color-gold) 72%, transparent);
 }
 
-.tome .actions { margin-top: 0.7rem; }
+.tome .actions { margin-top: 0.7rem; flex-wrap: nowrap; }
 
 .tome.is-soon {
   display: grid;
@@ -2104,6 +2119,7 @@ button.video {
   .track-list { grid-template-columns: 1fr; }
   .album-face { width: 4.8rem; top: 4.4rem; }
   .shelf, .tome { grid-template-columns: 1fr; }
+  .tome .actions { flex-wrap: wrap; }
   .tome img { width: 100%; height: 14rem; }
   .player-main { grid-template-columns: minmax(0, 1fr) auto; }
   .player-main .disc { display: none; }
