@@ -1,4 +1,4 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-BwQmMp4U.js
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-lfjqaUMZ.js
 var tsrStartManifest = () => ({ routes: {
 	__root__: {
 		filePath: "/workspace/src/routes/__root.tsx",
@@ -7,35 +7,35 @@ var tsrStartManifest = () => ({ routes: {
 			"/guides/$slug",
 			"/guides/"
 		],
-		preloads: ["/assets/index-D4ZhzqI3.js"],
+		preloads: ["/assets/index-8cUum9-L.js"],
 		scripts: [{ attrs: {
 			type: "module",
 			async: !0,
-			src: "/assets/index-D4ZhzqI3.js"
+			src: "/assets/index-8cUum9-L.js"
 		} }]
 	},
 	"/": {
 		filePath: "/workspace/src/routes/index.tsx",
 		children: void 0,
-		preloads: ["/assets/routes-VZlHn3k3.js", "/assets/chronicle-BdPNhNIF.js"]
+		preloads: ["/assets/routes-1acuB7r6.js", "/assets/chronicle-CPuDKMKq.js"]
 	},
 	"/guides/$slug": {
 		filePath: "/workspace/src/routes/guides/$slug.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/_slug-BK9x0knu.js",
-			"/assets/chronicle-BdPNhNIF.js",
-			"/assets/_slug-hUdlb0vz.js",
-			"/assets/guides-view-gkjjqf8S.js"
+			"/assets/_slug-Bv2TBW14.js",
+			"/assets/chronicle-CPuDKMKq.js",
+			"/assets/_slug-D-PQqING.js",
+			"/assets/guides-view-C02M2juf.js"
 		]
 	},
 	"/guides/": {
 		filePath: "/workspace/src/routes/guides/index.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/guides-D4TSh7bd.js",
-			"/assets/chronicle-BdPNhNIF.js",
-			"/assets/guides-view-gkjjqf8S.js"
+			"/assets/guides-Dd-gtrmI.js",
+			"/assets/chronicle-CPuDKMKq.js",
+			"/assets/guides-view-C02M2juf.js"
 		]
 	}
 } });
