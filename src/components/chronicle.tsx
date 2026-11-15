@@ -606,7 +606,7 @@ export function GalleryView() {
   }] : plates;
   return <section><p className="kicker">Галерея</p><h1 style={{
       fontSize: "clamp(3rem, 8vw, 5rem)"
-    }}>Кадры пути</h1><p className="lead">Она проходит миры и забирает с собой один кадр. Лента едет сама. У края экрана картинка рассыпается на квадраты и собирается, когда возвращается.</p><DustGallery onOpen={setOpen} /><div className="chips" data-led="filters" style={{
+    }}>Кадры пути</h1><p className="lead">Она проходит миры и забирает с собой один кадр. Лента едет сама. К центру осколки собираются в картинку, у края снова рассыпаются.</p><DustGallery onOpen={setOpen} /><div className="chips" data-led="filters" style={{
       margin: "1rem 0"
     }}>{["миры", "лица", "шапка", "книга"].map(name => <button key={name} className="ghost" type="button" data-on={filter === name} onClick={() => setFilter(name)}>{name === "книга" ? plates.length ? `Из книги · ${plates.length}` : "Из книги" : name}</button>)}</div><div className="shot-grid">{items.map(item => <button key={item.src + item.alt} className="shot" type="button" onClick={() => setOpen(item)}><Shot src={item.src} alt={item.alt} /><figcaption>{item.alt}</figcaption></button>)}</div>{open ? <div className="lightbox" role="dialog" aria-label={open.alt} onClick={() => setOpen(null)}><div><Shot src={open.src} alt={open.alt} /><p>{open.alt}</p></div></div> : null}</section>;
 }

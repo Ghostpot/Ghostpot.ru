@@ -11,10 +11,83 @@ const FRAMES = [
   { src: "/brand/slides/nito3.webp", alt: "Ни то. Окно и автобус." }
 ];
 
-const TILE = 14;
+const ASPECT = 16 / 9;
+const TILE = 6;
 
 type Frame = { src: string; alt: string };
-type Loaded = Frame & { img: HTMLImageElement; ready: boolean };
+
+const VERT = `#version 300 es
+layout(location = 0) in vec2 aPos;
+layout(location = 1) in vec2 aCell;
+uniform vec2 uCard;
+uniform vec2 uCardSize;
+uniform vec2 uView;
+uniform float uTile;
+out vec2 vUv;
+out float vAlpha;
+
+float hash(vec2 p) {
+  return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
+}
+
+void main() {
+  vec2 center = uCard + aCell + vec2(uTile * 0.5);
+  float zone = uView.x * 0.48;
+  float dist = min(center.x, uView.x - center.x);
+  float f = clamp(dist / zone, 0.0, 1.0);
+  float n = hash(aCell);
+  float n2 = hash(aCell + vec2(19.2, 7.7));
+  f = clamp(f + (n - 0.5) * 0.28, 0.0, 1.0);
+  float s = pow(1.0 - smoothstep(0.0, 1.0, f), 1.02);
+  float dir = center.x < uView.x * 0.5 ? -1.0 : 1.0;
+  vec2 fly = vec2(
+    dir * s * uView.x * 0.38 + (n - 0.5) * s * uView.x * 0.18,
+    (n2 - 0.5) * s * uView.y * 0.55
+  );
+  float ang = (n - 0.5) * s * 2.4;
+  float shrink = mix(1.05, 0.28, s);
+  vec2 local = (aPos - 0.5) * uTile * shrink;
+  float c = cos(ang);
+  float si = sin(ang);
+  local = vec2(c * local.x - si * local.y, si * local.x + c * local.y);
+  vec2 pos = center + fly + local;
+  vec2 clip = (pos / uView) * 2.0 - 1.0;
+  clip.y = -clip.y;
+  gl_Position = vec4(clip, 0.0, 1.0);
+  vUv = (aCell + aPos * uTile) / uCardSize;
+  vAlpha = smoothstep(0.02, 0.42, f);
+}
+`;
+
+const FRAG = `#version 300 es
+precision highp float;
+uniform sampler2D uTex;
+in vec2 vUv;
+in float vAlpha;
+out vec4 outColor;
+void main() {
+  if (vUv.x < 0.0 || vUv.y < 0.0 || vUv.x > 1.0 || vUv.y > 1.0) discard;
+  vec4 color = texture(uTex, vUv);
+  float a = color.a * vAlpha;
+  if (a < 0.015) discard;
+  outColor = vec4(color.rgb, a);
+}
+`;
+
+function layoutOf(width: number, height: number) {
+  const cardH = Math.min(height * 0.72, 520);
+  const cardW = cardH * ASPECT;
+  const gap = 28;
+  const step = cardW + gap;
+  return {
+    cardH,
+    cardW,
+    gap,
+    step,
+    loop: step * FRAMES.length,
+    cardY: (height - cardH) / 2
+  };
+}
 
 export function DustGallery({ onOpen }: { onOpen: (item: Frame) => void }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -23,173 +96,199 @@ export function DustGallery({ onOpen }: { onOpen: (item: Frame) => void }) {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d", { alpha: false });
-    if (!ctx) return;
-    const images: Loaded[] = FRAMES.map(frame => {
-      const img = new Image();
-      img.src = frame.src;
-      return { ...frame, img, ready: false };
+    const gl = canvas.getContext("webgl2", {
+      alpha: false,
+      antialias: false,
+      premultipliedAlpha: false,
+      powerPreference: "high-performance"
     });
-    images.forEach(item => {
-      item.img.onload = () => {
-        item.ready = true;
+    if (!gl) return;
+
+    const compile = (type: number, source: string) => {
+      const shader = gl.createShader(type);
+      if (!shader) return null;
+      gl.shaderSource(shader, source);
+      gl.compileShader(shader);
+      if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+        gl.deleteShader(shader);
+        return null;
+      }
+      return shader;
+    };
+    const vs = compile(gl.VERTEX_SHADER, VERT);
+    const fs = compile(gl.FRAGMENT_SHADER, FRAG);
+    if (!vs || !fs) return;
+    const program = gl.createProgram();
+    if (!program) return;
+    gl.attachShader(program, vs);
+    gl.attachShader(program, fs);
+    gl.linkProgram(program);
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) return;
+    gl.useProgram(program);
+
+    const uCard = gl.getUniformLocation(program, "uCard");
+    const uCardSize = gl.getUniformLocation(program, "uCardSize");
+    const uView = gl.getUniformLocation(program, "uView");
+    const uTile = gl.getUniformLocation(program, "uTile");
+    const quad = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, quad);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1]), gl.STATIC_DRAW);
+    gl.enableVertexAttribArray(0);
+    gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+
+    const cells = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, cells);
+    gl.enableVertexAttribArray(1);
+    gl.vertexAttribPointer(1, 2, gl.FLOAT, false, 0, 0);
+    gl.vertexAttribDivisor(1, 1);
+
+    let count = 0;
+    let gridKey = "";
+    const rebuild = (cardW: number, cardH: number, tile: number) => {
+      const key = `${Math.round(cardW)}|${Math.round(cardH)}|${tile}`;
+      if (key === gridKey) return;
+      gridKey = key;
+      const cols = Math.ceil(cardW / tile);
+      const rows = Math.ceil(cardH / tile);
+      const data = new Float32Array(cols * rows * 2);
+      let i = 0;
+      for (let y = 0; y < rows; y++) {
+        for (let x = 0; x < cols; x++) {
+          data[i++] = x * tile;
+          data[i++] = y * tile;
+        }
+      }
+      gl.bindBuffer(gl.ARRAY_BUFFER, cells);
+      gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
+      count = cols * rows;
+    };
+
+    const textures: (WebGLTexture | null)[] = FRAMES.map(() => null);
+    const ready = FRAMES.map(() => false);
+    FRAMES.forEach((frame, index) => {
+      const img = new Image();
+      img.onload = () => {
+        const tex = gl.createTexture();
+        gl.bindTexture(gl.TEXTURE_2D, tex);
+        gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, 0);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
+        gl.generateMipmap(gl.TEXTURE_2D);
+        textures[index] = tex;
+        ready[index] = true;
       };
+      img.src = frame.src;
     });
 
+    gl.enable(gl.BLEND);
+    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let scroll = 0;
-    let velocity = reduce ? 0 : 0.35;
+    let velocity = reduce ? 0 : 0.45;
     let dragging = false;
     let moved = 0;
     let lastX = 0;
-    let frame = 0;
+    let raf = 0;
     let alive = true;
 
-    const size = () => {
+    const resize = () => {
       const rect = canvas.getBoundingClientRect();
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      canvas.width = Math.max(1, Math.round(rect.width * dpr));
-      canvas.height = Math.max(1, Math.round(rect.height * dpr));
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      return rect;
-    };
-    size();
-    const onResize = () => size();
-    window.addEventListener("resize", onResize);
-
-    const edge = (x, width) => {
-      const zone = width * 0.22;
-      return Math.min(1, Math.max(0, Math.min(x, width - x) / zone));
-    };
-
-    const drawTiles = (img, cardX, cardY, cardW, cardH, from, to, width) => {
-      const srcW = img.naturalWidth;
-      const srcH = img.naturalHeight;
-      for (let x = from; x < to; x += TILE) {
-        const f = edge(x + TILE / 2, width);
-        if (f > 0.97) continue;
-        const scatter = (1 - f) ** 1.7;
-        const col = Math.round(x);
-        const dir = x < width / 2 ? -1 : 1;
-        for (let y = cardY; y < cardY + cardH; y += TILE) {
-          const row = Math.round(y);
-          const n = Math.sin(col * 12.9898 + row * 78.233) * 43758.5453;
-          const noise = n - Math.floor(n) - 0.5;
-          const alpha = f ** 0.55;
-          if (alpha < 0.03) continue;
-          const dx = dir * scatter * 78 + noise * scatter * 30;
-          const dy = noise * scatter * 46;
-          const dw = TILE * (1 - scatter * 0.45);
-          ctx.globalAlpha = alpha;
-          ctx.drawImage(
-            img,
-            (x - cardX) / cardW * srcW,
-            (y - cardY) / cardH * srcH,
-            TILE / cardW * srcW,
-            TILE / cardH * srcH,
-            x + dx,
-            y + dy,
-            dw,
-            dw
-          );
-        }
+      const w = Math.max(1, Math.round(rect.width * dpr));
+      const h = Math.max(1, Math.round(rect.height * dpr));
+      if (canvas.width !== w || canvas.height !== h) {
+        canvas.width = w;
+        canvas.height = h;
       }
+      return { rect, dpr };
     };
 
     const tick = () => {
       if (!alive) return;
-      frame = requestAnimationFrame(tick);
-      const rect = canvas.getBoundingClientRect();
-      const width = rect.width;
-      const height = rect.height;
+      raf = requestAnimationFrame(tick);
+      const { rect, dpr } = resize();
+      const cssW = rect.width;
+      const cssH = rect.height;
       if (!dragging) scroll += velocity;
-      velocity = dragging ? velocity : velocity * 0.96 + (reduce ? 0 : 0.35) * 0.04;
+      const cruise = reduce ? 0 : 0.45;
+      if (!dragging) velocity += (cruise - velocity) * 0.035;
 
-      const cardH = Math.min(height * 0.78, 520);
-      const cardW = cardH * 1.45;
-      const gap = 18;
-      const step = cardW + gap;
-      const loop = step * images.length;
-      scroll = (scroll % loop + loop) % loop;
-      const cardY = (height - cardH) / 2;
-      const zone = width * 0.22;
+      const box = layoutOf(cssW, cssH);
+      scroll = (scroll % box.loop + box.loop) % box.loop;
+      const tile = TILE;
+      rebuild(box.cardW * dpr, box.cardH * dpr, tile * dpr);
 
-      ctx.globalAlpha = 1;
-      ctx.fillStyle = "#070605";
-      ctx.fillRect(0, 0, width, height);
+      gl.viewport(0, 0, canvas.width, canvas.height);
+      gl.clearColor(7 / 255, 6 / 255, 5 / 255, 1);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+      gl.useProgram(program);
+      gl.uniform2f(uView, canvas.width, canvas.height);
+      gl.uniform2f(uCardSize, box.cardW * dpr, box.cardH * dpr);
+      gl.uniform1f(uTile, tile * dpr);
+      gl.bindBuffer(gl.ARRAY_BUFFER, quad);
+      gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+      gl.bindBuffer(gl.ARRAY_BUFFER, cells);
+      gl.vertexAttribPointer(1, 2, gl.FLOAT, false, 0, 0);
 
-      let nearest = null;
+      let nearest: Frame | null = null;
       let nearestDist = Infinity;
-      images.forEach((item, index) => {
-        if (!item.ready) return;
-        let cardX = ((index * step - scroll) % loop + loop) % loop;
-        if (cardX > width) cardX -= loop;
-        if (cardX > width + 40 || cardX + cardW < -40) return;
-        const mid = cardX + cardW / 2;
-        const dist = Math.abs(mid - width / 2);
+      const margin = cssW * 0.45;
+      for (let index = 0; index < FRAMES.length; index++) {
+        if (!ready[index] || !textures[index] || count === 0) continue;
+        let cardX = ((index * box.step - scroll) % box.loop + box.loop) % box.loop;
+        if (cardX > cssW) cardX -= box.loop;
+        if (cardX > cssW + margin || cardX + box.cardW < -margin) continue;
+        const mid = cardX + box.cardW / 2;
+        const dist = Math.abs(mid - cssW / 2);
         if (dist < nearestDist) {
           nearestDist = dist;
-          nearest = item;
+          nearest = FRAMES[index];
         }
-        const solidL = Math.max(cardX, zone);
-        const solidR = Math.min(cardX + cardW, width - zone);
-        if (solidR - solidL > 1) {
-          ctx.save();
-          ctx.beginPath();
-          ctx.rect(solidL, cardY, solidR - solidL, cardH);
-          ctx.clip();
-          ctx.globalAlpha = 1;
-          ctx.drawImage(item.img, cardX, cardY, cardW, cardH);
-          ctx.restore();
-        }
-        if (!reduce) {
-          if (cardX < zone) drawTiles(item.img, cardX, cardY, cardW, cardH, cardX, Math.min(cardX + cardW, zone), width);
-          if (cardX + cardW > width - zone) drawTiles(item.img, cardX, cardY, cardW, cardH, Math.max(cardX, width - zone), cardX + cardW, width);
-        } else if (solidR - solidL <= 1) {
-          ctx.globalAlpha = 1;
-          ctx.drawImage(item.img, cardX, cardY, cardW, cardH);
-        }
-      });
+        gl.uniform2f(uCard, cardX * dpr, box.cardY * dpr);
+        gl.activeTexture(gl.TEXTURE0);
+        gl.bindTexture(gl.TEXTURE_2D, textures[index]);
+        gl.drawArraysInstanced(gl.TRIANGLES, 0, 6, count);
+      }
       if (labelRef.current && nearest && labelRef.current.textContent !== nearest.alt) {
         labelRef.current.textContent = nearest.alt;
       }
     };
-    frame = requestAnimationFrame(tick);
+    raf = requestAnimationFrame(tick);
 
-    const pointerDown = event => {
+    const pointerDown = (event: PointerEvent) => {
       dragging = true;
       moved = 0;
       lastX = event.clientX;
       velocity = 0;
       canvas.setPointerCapture?.(event.pointerId);
     };
-    const pointerMove = event => {
+    const pointerMove = (event: PointerEvent) => {
       if (!dragging) return;
       const dx = event.clientX - lastX;
       lastX = event.clientX;
       moved += Math.abs(dx);
       scroll -= dx;
-      velocity = -dx;
+      velocity = -dx * 0.65;
     };
-    const pointerUp = event => {
+    const pointerUp = (event: PointerEvent) => {
       if (!dragging) return;
       dragging = false;
       if (moved > 8) return;
       const rect = canvas.getBoundingClientRect();
       const x = event.clientX - rect.left;
       const y = event.clientY - rect.top;
-      const cardH = Math.min(rect.height * 0.78, 520);
-      const cardW = cardH * 1.45;
-      const gap = 18;
-      const step = cardW + gap;
-      const loop = step * images.length;
-      const cardY = (rect.height - cardH) / 2;
-      if (y < cardY || y > cardY + cardH) return;
-      const local = (x + (scroll % loop) + loop) % loop;
-      const index = Math.floor(local / step);
-      if (local - index * step > cardW) return;
-      const item = images[index];
-      if (item) onOpen({ src: item.src, alt: item.alt });
+      const box = layoutOf(rect.width, rect.height);
+      if (y < box.cardY || y > box.cardY + box.cardH) return;
+      const zone = rect.width * 0.48;
+      if (Math.min(x, rect.width - x) / zone < 0.62) return;
+      const local = (x + (scroll % box.loop) + box.loop) % box.loop;
+      const index = Math.floor(local / box.step);
+      if (local - index * box.step > box.cardW) return;
+      const item = FRAMES[index];
+      if (item) onOpen(item);
     };
     canvas.addEventListener("pointerdown", pointerDown);
     canvas.addEventListener("pointermove", pointerMove);
@@ -198,14 +297,17 @@ export function DustGallery({ onOpen }: { onOpen: (item: Frame) => void }) {
 
     return () => {
       alive = false;
-      cancelAnimationFrame(frame);
-      window.removeEventListener("resize", onResize);
+      cancelAnimationFrame(raf);
       canvas.removeEventListener("pointerdown", pointerDown);
       canvas.removeEventListener("pointermove", pointerMove);
       canvas.removeEventListener("pointerup", pointerUp);
       canvas.removeEventListener("pointercancel", pointerUp);
+      textures.forEach(tex => tex && gl.deleteTexture(tex));
+      gl.deleteBuffer(quad);
+      gl.deleteBuffer(cells);
+      gl.deleteProgram(program);
     };
   }, [onOpen]);
 
-  return <div className="dust"><canvas ref={canvasRef} aria-label="Лента путешествий Люси" /><p className="dust-label" ref={labelRef}>Путь между мирами</p><p className="dust-hint">Потяни. У края кадр рассыпается.</p></div>;
+  return <div className="dust"><canvas ref={canvasRef} aria-label="Лента путешествий Люси" /><p className="dust-label" ref={labelRef}>Путь между мирами</p><p className="dust-hint">Потяни. У края кадр рассыпается на осколки.</p></div>;
 }
