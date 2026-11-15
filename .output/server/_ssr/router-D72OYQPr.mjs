@@ -1,9 +1,9 @@
 import { i as __toESM } from "../_runtime.mjs";
-import { n as guideBySlug } from "./guides-CWX7-Seh.mjs";
 import { J as notFound, Y as require_react, _ as createFileRoute, b as useRouter, d as Scripts, f as HeadContent, g as lazyRouteComponent, h as Outlet, m as createRouter, v as createRootRoute, x as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
+import { n as guideBySlug } from "./guides-CWX7-Seh.mjs";
 import { t as TriangleAlert } from "../_libs/lucide-react.mjs";
 import { a as union, i as string, n as number, r as object, t as literal } from "../_libs/zod.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-ZFXmgZJs.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-D72OYQPr.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var __defProp = Object.defineProperty;
@@ -429,9 +429,9 @@ var Route$3 = createRootRoute({
 		] })]
 	})
 });
-var $$splitComponentImporter$2 = () => import("./routes-tw_Ox1y-.mjs");
+var $$splitComponentImporter$2 = () => import("./routes-CGlH48_I.mjs");
 var Route$2 = createFileRoute("/")({ component: lazyRouteComponent($$splitComponentImporter$2, "component") });
-var $$splitComponentImporter$1 = () => import("./guides-DAk_B9pV.mjs");
+var $$splitComponentImporter$1 = () => import("./guides-5gCFebeQ.mjs");
 var Route$1 = createFileRoute("/guides/")({
 	head: () => ({
 		meta: [{ title: "Гайды по играм Люси — Ghostpot" }, {
@@ -445,8 +445,8 @@ var Route$1 = createFileRoute("/guides/")({
 	}),
 	component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-var $$splitComponentImporter = () => import("../_slug-DQ_Ua0cd.mjs");
-var $$splitNotFoundComponentImporter = () => import("../_slug-nZvtqF9-.mjs");
+var $$splitComponentImporter = () => import("../_slug-D0sexX3H.mjs");
+var $$splitNotFoundComponentImporter = () => import("../_slug-BwDxI4IA.mjs");
 var Route = createFileRoute("/guides/$slug")({
 	loader: ({ params }) => {
 		const guide = guideBySlug(params.slug);
