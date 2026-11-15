@@ -16,6 +16,7 @@ import { AirFeed } from "@/components/air-feed";
 import { LiveBadge } from "@/components/live-badge";
 import { ShardPin, ShardPlate, ShardVault } from "@/components/shards";
 import { DustGallery } from "@/components/dust-gallery";
+import { usePlayer } from "@/lib/player-store";
 
 export type View =
   | { name: "home" }
