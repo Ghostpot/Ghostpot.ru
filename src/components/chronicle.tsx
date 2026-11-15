@@ -183,8 +183,8 @@ function WorldCard({
 }
 var ARRIVALS = ["В зал вошли двое и сели ближе к проходу.", "Кто-то встал и вышел за попкорном.", "В третьем ряду освободилось место.", "Ещё один зритель сел на этот сеанс.", "Из фойе вернулись. Свет уже гаснет."];
 var SLIDES = [{
-  src: "/brand/slides/nito2.webp",
-  video: "/brand/slides/nito2.mp4",
+  src: "/brand/slides/nito3.webp",
+  video: "/brand/slides/nito3.mp4",
   world: "Ни то",
   line: "Клип. Нажми по экрану, если хочешь звук."
 }, {
