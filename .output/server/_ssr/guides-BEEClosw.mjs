@@ -1,7 +1,7 @@
 import { x as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
-import { d as Shell } from "./chronicle-DSHjRrqk.mjs";
-import { n as GuideIndex } from "./guides-view-C15Tn6Hc.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/guides-Dn9xqfjJ.js
+import { d as Shell } from "./chronicle-DDPrCdv_.mjs";
+import { n as GuideIndex } from "./guides-view-BhOs6Xk9.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/guides-BEEClosw.js
 var import_jsx_runtime = require_jsx_runtime();
 var SplitComponent = function GuidesPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Shell, {

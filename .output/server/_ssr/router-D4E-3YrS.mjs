@@ -3,7 +3,7 @@ import { J as notFound, Y as require_react, _ as createFileRoute, b as useRouter
 import { n as guideBySlug } from "./guides-CWX7-Seh.mjs";
 import { t as TriangleAlert } from "../_libs/lucide-react.mjs";
 import { a as union, i as string, n as number, r as object, t as literal } from "../_libs/zod.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-_XpaRhAz.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-D4E-3YrS.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var __defProp = Object.defineProperty;
@@ -341,7 +341,7 @@ function PreviewHostBridge() {
 	}, [router]);
 	return null;
 }
-var styles_default = "/assets/styles-CE7bMm2e.css";
+var styles_default = "/assets/styles-Clk4uXMe.css";
 var Route$3 = createRootRoute({
 	head: () => ({
 		meta: [
@@ -429,9 +429,9 @@ var Route$3 = createRootRoute({
 		] })]
 	})
 });
-var $$splitComponentImporter$2 = () => import("./routes-5yt7L0yS.mjs");
+var $$splitComponentImporter$2 = () => import("./routes-XIV3lSqV.mjs");
 var Route$2 = createFileRoute("/")({ component: lazyRouteComponent($$splitComponentImporter$2, "component") });
-var $$splitComponentImporter$1 = () => import("./guides-Dn9xqfjJ.mjs");
+var $$splitComponentImporter$1 = () => import("./guides-BEEClosw.mjs");
 var Route$1 = createFileRoute("/guides/")({
 	head: () => ({
 		meta: [{ title: "Гайды по играм Люси — Ghostpot" }, {
@@ -445,8 +445,8 @@ var Route$1 = createFileRoute("/guides/")({
 	}),
 	component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-var $$splitComponentImporter = () => import("../_slug-nBWoXffp.mjs");
-var $$splitNotFoundComponentImporter = () => import("../_slug-BgxFuh7Y.mjs");
+var $$splitComponentImporter = () => import("../_slug-Ds5F-Brq.mjs");
+var $$splitNotFoundComponentImporter = () => import("../_slug-B6qTBx1a.mjs");
 var Route = createFileRoute("/guides/$slug")({
 	loader: ({ params }) => {
 		const guide = guideBySlug(params.slug);
