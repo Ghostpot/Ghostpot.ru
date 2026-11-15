@@ -1,6 +1,6 @@
 // Recovered from the production bundle after a bad edit. Behavior matches the last deploy.
 // @ts-nocheck
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useRouter } from "@tanstack/react-router";
 import { Bookmark } from "lucide-react";
 import { BookBar } from "@/components/book-bar";
@@ -183,6 +183,11 @@ function WorldCard({
 }
 var ARRIVALS = ["В зал вошли двое и сели ближе к проходу.", "Кто-то встал и вышел за попкорном.", "В третьем ряду освободилось место.", "Ещё один зритель сел на этот сеанс.", "Из фойе вернулись. Свет уже гаснет."];
 var SLIDES = [{
+  src: "/brand/slides/nito.webp",
+  video: "/brand/slides/nito.mp4",
+  world: "Ни то",
+  line: "Клип. Нажми по экрану, если хочешь звук."
+}, {
   src: "/brand/slides/rangers.webp",
   world: "Space Rangers",
   line: "Свет среди звёзд. Корабль и тишина."
@@ -217,23 +222,45 @@ export function HomeView() {
   const rest = worlds.filter(world => !world.live);
   const [beat, setBeat] = useState(0);
   const [slide, setSlide] = useState(0);
+  const clipRef = useRef(null);
   useEffect(() => {
     const timer = window.setInterval(() => setBeat(value => (value + 1) % ARRIVALS.length), 4600);
     return () => window.clearInterval(timer);
   }, []);
   useEffect(() => {
+    if (SLIDES[slide].video) return undefined;
     const timer = window.setInterval(() => setSlide(value => (value + 1) % SLIDES.length), 6500);
     return () => window.clearInterval(timer);
-  }, []);
+  }, [slide]);
+  useEffect(() => {
+    const node = clipRef.current;
+    if (!node) return;
+    if (SLIDES[slide].video) node.play().catch(() => {});
+    else {
+      node.pause();
+      node.muted = true;
+    }
+  }, [slide]);
   const frame = SLIDES[slide];
   return <><section className="hall" aria-label="Кинозал Ghostpot"><div className="theater"><img className="theater-bg" src="/brand/slides/hall.webp" alt="" fetchPriority="high" decoding="async" /><div className="theater-screen" data-led="screen" aria-roledescription="карусель" aria-label="Эпизоды Люси">{SLIDES.map((item, index) => {
             const last = (slide + SLIDES.length - 1) % SLIDES.length;
             const next = (slide + 1) % SLIDES.length;
             const visible = index === slide || index === next || slide !== 0 && index === last;
-            return <button key={item.world} className="theater-frame" type="button" data-on={index === slide} onClick={() => go({
-              name: "world",
-              id: item.world
-            })} aria-label={`${item.world}. ${item.line}`}>{visible ? <img src={item.src} alt="" decoding="async" fetchPriority={index === slide ? "high" : "low"} /> : null}</button>;
+            return <button key={item.world} className="theater-frame" type="button" data-on={index === slide} onClick={() => {
+              if (item.video && clipRef.current) {
+                const node = clipRef.current;
+                node.muted = !node.muted;
+                if (!node.muted) {
+                  usePlayer.getState().pause();
+                  node.play();
+                }
+                return;
+              }
+              go({
+                name: "world",
+                id: item.world
+              });
+            }} aria-label={`${item.world}. ${item.line}`}>{visible ? item.video ? <video ref={clipRef} src={item.video} poster={item.src} muted playsInline preload="metadata" onEnded={() => setSlide(value => (value + 1) % SLIDES.length)} /> : <img src={item.src} alt="" decoding="async" fetchPriority={index === slide ? "high" : "low"} /> : null}</button>;
           })}<div className="screen-card"><p className="screen-kicker">Сейчас на экране</p><p className="screen-film">{frame.world}</p><p className="screen-line">{frame.line}</p></div><div className="theater-dots">{SLIDES.map((item, index) => <button key={item.world} type="button" data-on={index === slide} aria-label={item.world} onClick={() => setSlide(index)} />)}</div></div><p className="arrival" aria-live="polite">{ARRIVALS[beat]}</p><a className="popcorn" data-led="popcorn" href={links.boosty}><span className="bucket" aria-hidden="true" /><span>Купить попкорн<small>донат на сеанс</small></span></a></div><aside className="bill"><p className="bill-side">14 игр · одна героиня</p><div><p className="kicker">Кино и игра</p><h2><em>Игра</em> стала сеансом</h2><p className="below">Ниже: миры, книга, музыка</p><p className="lead">Люси живёт внутри игр. Фэнтези, техника и магия для неё не партия, а дом: ест, поёт, снимает блог, убивает, любит. Мир отпускает, только когда миссия закрыта. В следующем она начинает с нуля. У неё одно лицо, рысьи уши и рост 172.</p><p className="lead">Ты сидишь на этом стриме. Ghostpot — эфиры Николая Чичкань.</p><div className="roles"><article><b>Играет</b><span>миры, в которых она жила</span></article><article><b>Читает</b><span>книгу пути между играми</span></article><article><b>В зале</b><span>стрим, пока сеанс идёт</span></article></div><div className="actions"><a className="solid" href={links.twitch}>Смотреть стрим</a><button className="ghost" type="button" onClick={() => go({
               name: "worlds"
             })}>Миры</button><button className="ghost" type="button" onClick={() => go({

@@ -209,7 +209,8 @@
 
 .theater-frame[data-on="true"] { opacity: 1; z-index: 1; }
 
-.theater-frame img {
+.theater-frame img,
+.theater-frame video {
   width: 100%;
   height: 100%;
   object-fit: cover;

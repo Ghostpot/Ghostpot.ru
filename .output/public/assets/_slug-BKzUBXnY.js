@@ -1,0 +1,1 @@
+import{d as e}from"./chronicle-BRf8XI6m.js";import{l as t,t as n}from"./index-CFabo_2a.js";import{t as r}from"./guides-view-dZ9nuP8n.js";var i=t(),a=function(){let t=n.useLoaderData();return(0,i.jsx)(e,{view:{name:`law`},guides:!0,children:(0,i.jsx)(r,{guide:t})})};export{a as component};
